@@ -1,4 +1,5 @@
-
+const path = require('path')
+const PORT = process.env.PORT || 5000
 /*
 const express = require('express')
 const app = express()
@@ -17,7 +18,7 @@ app.listen(3000, function () {
 // Optional. You will see this name in eg. 'ps' or 'top' command
 process.title = 'node-chat';
 // Port where we'll run the websocket server
-var webSocketsServerPort = 1337;
+//var webSocketsServerPort = 1337;
 // websocket and http servers
 var webSocketServer = require('websocket').server;
 var http = require('http');
@@ -47,9 +48,9 @@ var server = http.createServer(function(request, response) {
   // Not important for us. We're writing WebSocket server,
   // not HTTP server
 });
-server.listen(webSocketsServerPort, function() {
+server.listen(PORT, function() {
   console.log((new Date()) + " Server is listening on port "
-      + webSocketsServerPort);
+      + PORT);
 });
 /**
  * WebSocket server
